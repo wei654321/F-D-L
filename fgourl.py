@@ -2,7 +2,6 @@ import json
 import binascii
 import requests
 import main
-import version
 import CatAndMouseGame
 import os
 
@@ -35,7 +34,7 @@ def set_latest_assets():
 
     # Get Latest Version of the data!
     version_str = main.get_latest_appver()
-    main.logger.info(f"vv{version_str}")
+    #main.logger.info(f"vv{version_str}")
 
     response = requests.get(
         server_addr_ + '/gamedata/top?appVer=' + version_str).text
@@ -47,7 +46,7 @@ def set_latest_assets():
     date_ver_ = response_data['dateVer']
     ver_code_ = main.get_latest_verCode()
 
-    main.logger.info(f"ver{ver_code_}")
+    #main.logger.info(f"ver{ver_code_}")
 
     # Use Asset Bundle Extractor to get Folder Name
     assetbundle = CatAndMouseGame.getAssetBundle(response_data['assetbundle'])
@@ -70,6 +69,7 @@ httpheader = {
     'Accept-Encoding': "deflate, gzip",
     'Content-Type': "application/x-www-form-urlencoded",
     'X-Unity-Version': "2022.3.28f1"
+    'X-Unity-Version': "2022.3.62f2"
 
 }
 
