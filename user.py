@@ -953,18 +953,3 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
                    
         else:
             main.logger.info(f"\n {'=' * 40} \n [+] 礼物盒中交換券なし(´･ω･`) \n {'=' * 40} ")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
