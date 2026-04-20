@@ -16,7 +16,7 @@ date_ver_ = 0
 ver_code_ = ''
 asset_bundle_folder_ = ''
 data_server_folder_crc_ = 0
-server_addr_ = "https://game.fate-go.jp"
+server_addr_ = 'https://game.fate-go.jp'
 github_token_ = ''
 github_name_ = ''
 
@@ -68,7 +68,7 @@ httpheader = {
     'User-Agent': user_agent_2,
     'Accept-Encoding': "deflate, gzip",
     'Content-Type': "application/x-www-form-urlencoded",
-    'X-Unity-Version': "2022.3.62f2"
+    'X-Unity-Version': "2022.3.28f1"
 
 }
 
