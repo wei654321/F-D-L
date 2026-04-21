@@ -1,7 +1,6 @@
 import json
 import binascii
 import requests
-import version
 import main
 import CatAndMouseGame
 import os
@@ -34,7 +33,9 @@ def set_latest_assets():
         server_addr_ = "https://game.fate-go.us"
 
     # Get Latest Version of the data!
-    version_str = version.get_version(region)
+    version_str = main.get_latest_appver()
+    #main.logger.info(f"vv{version_str}")
+
     response = requests.get(
         server_addr_ + '/gamedata/top?appVer=' + version_str).text
     response_data = json.loads(response)["response"][0]["success"]
@@ -44,6 +45,8 @@ def set_latest_assets():
     data_ver_ = response_data['dataVer']
     date_ver_ = response_data['dateVer']
     ver_code_ = main.get_latest_verCode()
+
+    #main.logger.info(f"ver{ver_code_}")
 
     # Use Asset Bundle Extractor to get Folder Name
     assetbundle = CatAndMouseGame.getAssetBundle(response_data['assetbundle'])
